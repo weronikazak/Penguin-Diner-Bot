@@ -57,7 +57,7 @@ for i, meal in enumerate(MEALS):
 # LOCATE CLIENTS
 while True:
 	# if the level is accomplished
-	endgame = pyautogui.locateCenterOnScreen("success.png", grayscale=True, confidence=.9)
+	endgame = pyautogui.locateCenterOnScreen("end.png", grayscale=True, confidence=.9)
 	if endgame is not None:
 		print("------END OF THE DAY!------")
 		# first, look for upgrades
@@ -78,7 +78,7 @@ while True:
 		# start next level if available
 		next_option = pyautogui.locateCenterOnScreen("nextlevel.png", confidence=.9)
 		if next_option is None:
-			# if not, start a new day
+			# if not, start a new day or restart a day
 			pyautogui.click(upgrades[0]-150, upgrades[1], interval=.3)
 		else:
 			print("\n------NEXT LEVEL!------\n")
