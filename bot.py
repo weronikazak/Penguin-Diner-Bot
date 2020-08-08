@@ -80,7 +80,7 @@ class PenguinDinterBot():
 
 		# since it's impossible to deal with numbers, click everything
 		for x in range(3):
-			for y in range(3):
+			for y in range(2, -1, -1):
 				click_x = upgrade_x_start + x*upgrade_x_offset
 				click_y = upgrade_y_start + y*upgrade_y_offset
 				pyautogui.click(click_x, click_y, interval=.2)
